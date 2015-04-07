@@ -594,6 +594,11 @@ legal-info: dirs legal-info-clean legal-info-prepare $(REDIST_SOURCES_DIR) \
 show-targets:
 	@echo $(TARGETS)
 
+clean-target:
+	rm -rf $(TARGET_DIR) $(STAGING_DIR) $(BUILD_DIR)/.root \
+		$(BUILD_DIR)/*/.stamp_target_installed $(BUILD_DIR)/*/.stamp_staging_installed \
+		$(BUILD_DIR)/linux-*/.stamp_installed $(BUILD_DIR)/*/.built
+
 else # ifeq ($(BR2_HAVE_DOT_CONFIG),y)
 
 all: menuconfig
