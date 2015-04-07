@@ -1,0 +1,6 @@
+menu "Zed boards"
+	depends on BR2_arm
+
+source "package/avnet/microzed/Config.in"
+
+endmenu

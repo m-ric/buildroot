@@ -1,0 +1,6 @@
+menu "Microzed"
+	depends on BR2_arm
+
+source "package/avnet/microzed/led-control/Config.in"
+
+endmenu
