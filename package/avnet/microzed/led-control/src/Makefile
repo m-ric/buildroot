@@ -1,3 +1,4 @@
+CFLAGS+=-g
 
 all: led-control
 
@@ -5,8 +6,8 @@ all: led-control
 	$(CC) $(CFLAGS) -c $^ -o $@
 	
 led-control: led-control.o
-	$(CC) $^ -o $@ $(LDFLAGS) 
+	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS) 
 
 .PHONY: clean
 clean:
-	rm -f led-control
+	rm -f led-control led-control.o
